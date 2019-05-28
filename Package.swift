@@ -4,6 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "HandyJSON"
+    name: "HandyJSON",
+    targets: [
+        .target(name: "HandyJSON", dependencies: ["HandyJSON iOS", "HandyJSON watchOS", "HandyJSON tvOS", "HandyJSON macOS"]),
+        .target(name: "HandyJSON iOS", dependencies: []),
+        .target(name: "HandyJSON watchOS", dependencies: []),
+        .target(name: "HandyJSON tvOS", dependencies: []),
+        .target(name: "HandyJSON macOS", dependencies: []),
+    ]    
 )
 
